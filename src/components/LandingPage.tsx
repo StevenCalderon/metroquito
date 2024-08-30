@@ -389,7 +389,7 @@ export default function LandingPage() {
 							</div>
 							<div className="flex items-center space-x-4">
 								<MailIcon className="h-6 w-6 text-[#ec253a]" />
-								<span>seabastian_gallegos@gmail.com</span>
+								<span>sebastian_gallegos@gmail.com</span>
 							</div>
 						</div>
 					</div>
