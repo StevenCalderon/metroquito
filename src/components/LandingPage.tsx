@@ -15,7 +15,7 @@ import {
 	Wrench,
 } from 'lucide-react';
 import imgBgMetroQuito from '../../public/images/bg-metro-quito.jpg';
-import imgLgSaturdays from '../../public/images/lg-saturdays.png';
+import imgLgSaturdaysBlue from '../../public/images/imgLgSaturdaysBlue.png';
 import imgLgLinkedin from '../../public/images/linkedin.png';
 import imgMemberSc from '../../public/images/member-sc.jpeg';
 import imgUserDefault from '../../public/images/user_default.png';
@@ -23,6 +23,7 @@ import imgUserDefault from '../../public/images/user_default.png';
 import imgCamara from '../../public/images/camara.png';
 import imgHowWorks from '../../public/images/howWorks.jpeg';
 import imgLgOpenCv from '../../public/images/lg-opencv.png';
+import imgMemberKb from '../../public/images/imgMemberKb.jpeg';
 
 export default function LandingPage() {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -33,7 +34,7 @@ export default function LandingPage() {
 	return (
 		<div className="min-h-screen bg-gray-100">
 			{/* Hero Section */}
-			<header className="bg-[#223e77] text-white py-20 relative overflow-hidden">
+			<header className="bg-[#223e77] text-white p-14 sm:p-20 md:px-0 2xl:py-10  relative overflow-hidden">
 				<div className="container mx-auto text-center relative z-10">
 					<TrainIcon className="h-24 w-24 mx-auto mb-6 text-[#ec253a]" />
 					<h1 className="text-5xl font-bold mb-4">Metro de Quito + IA </h1>
@@ -41,7 +42,7 @@ export default function LandingPage() {
 						Cómo la IA Hará del Metro de Quito un Lugar Más Seguro para Todos
 					</p>
 					<Button
-						className="bg-[#ec253a] hover:bg-red-700 text-white"
+						className="!bg-[#ec253a] hover:!bg-red-700 !text-white"
 						onClick={() =>
 							window.open(
 								'https://github.com/StevenCalderon/metroquito',
@@ -55,14 +56,13 @@ export default function LandingPage() {
 				<Image
 					src={imgBgMetroQuito}
 					alt="Metro de Quito"
-					layout="fill"
+					fill={true}
 					objectFit="cover"
 					className="opacity-20"
 				/>
 			</header>
 
-			{/* Objectives Section */}
-			<section className="py-20 bg-white">
+			<section className="px-7 py-20 sm:px-20 md:px-5 xl:px-16 2xl:px-44 bg-gray-100">
 				<div className="container mx-auto">
 					<h2 className="text-4xl font-bold text-center mb-12 text-[#223e77]">
 						Objetivos del MVP
@@ -105,15 +105,14 @@ export default function LandingPage() {
 				</div>
 			</section>
 
-			{/* Technical Description */}
-			<section className="py-20 bg-gray-100">
+			<section className="py-20 bg-[#223e77]">
 				<div className="container mx-auto">
-					<h2 className="text-4xl font-bold text-center mb-12 text-[#223e77]">
+					<h2 className="text-4xl font-bold text-center mb-12 text-white">
 						Descripción Técnica
 					</h2>
-					<div className="grid md:grid-cols-2 gap-8">
+					<div className="grid px-7 sm:px-20 md:px-5 xl:px-16 2xl:px-44 md:grid-cols-2 gap-8">
 						<Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-							<CardContent className="pt-6">
+							<CardContent className="pt-6 text-sm md:text-base ">
 								<h3 className="text-2xl font-semibold mb-4 text-[#223e77]">
 									Hardware
 								</h3>
@@ -130,12 +129,12 @@ export default function LandingPage() {
 									alt="Configuración de Hardware"
 									width={140}
 									height={140}
-									className="pt-4"
+									className="pt-4 xl:pt-7 m-auto"
 								/>
 							</CardContent>
 						</Card>
-						<Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-							<CardContent className="pt-6">
+						<Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-sm">
+							<CardContent className="pt-6 text-sm md:text-base">
 								<h3 className="text-2xl font-semibold mb-4 text-[#223e77]">
 									Software
 								</h3>
@@ -151,7 +150,7 @@ export default function LandingPage() {
 									alt="Interfaz de Software"
 									width={100}
 									height={100}
-									className="pt-4"
+									className="pt-4 xl:pt-7 m-auto"
 								/>
 							</CardContent>
 						</Card>
@@ -159,8 +158,7 @@ export default function LandingPage() {
 				</div>
 			</section>
 
-			{/* Timeline */}
-			<section className="py-20 bg-white">
+			<section className="px-7 py-20 sm:px-20 md:px-5 xl:px-16 2xl:px-44 bg-gray-100">
 				<div className="container mx-auto">
 					<h2 className="text-4xl font-bold text-center mb-12 text-[#223e77]">
 						Cronograma del MVP
@@ -213,13 +211,12 @@ export default function LandingPage() {
 				</div>
 			</section>
 
-			{/* Benefits */}
-			<section className="py-20 bg-gray-100">
+			<section className="py-20 bg-[#223e77]">
 				<div className="container mx-auto">
-					<h2 className="text-4xl font-bold text-center mb-12 text-[#223e77]">
+					<h2 className="text-4xl font-bold text-center mb-12 text-white">
 						Ventajas del MVP
 					</h2>
-					<div className="grid md:grid-cols-3 gap-8">
+					<div className="px-7 sm:px-20 md:px-5 xl:px-16 2xl:px-12 grid md:grid-cols-3 gap-8">
 						{[
 							{
 								title: 'Validación Técnica',
@@ -257,18 +254,17 @@ export default function LandingPage() {
 				</div>
 			</section>
 
-			{/* Illustration Section */}
-			<section className="py-20 bg-white">
+			<section className="px-7 py-20 sm:px-20 md:px-12  xl:px-16 2xl:px-44 bg-gray-100">
 				<div className="container mx-auto">
 					<h2 className="text-4xl font-bold text-center mb-12 text-[#223e77]">
 						Cómo Funciona
 					</h2>
-					<div className="grid md:grid-cols-2 gap-8 items-center">
+					<div className="grid md:grid-cols-2 gap-8 xl:gap-14 items-center">
 						<div>
 							<h3 className="text-2xl font-semibold mb-4 text-[#223e77]">
 								Detección y Alerta en Tiempo Real
 							</h3>
-							<ol className="list-decimal list-inside space-y-2">
+							<ol className="xl:text-xl 2xl:text-2xl list-decimal list-inside space-y-2 text-black!">
 								<li>Las cámaras capturan imágenes de la plataforma</li>
 								<li>
 									El sistema de IA analiza la proximidad de los pasajeros a la
@@ -296,10 +292,9 @@ export default function LandingPage() {
 				</div>
 			</section>
 
-			{/* Team */}
-			<section className="py-20 bg-gray-100">
+			<section className="py-20 bg-[#223e77]">
 				<div className="container mx-auto">
-					<h2 className="text-4xl font-bold text-center mb-12 text-[#223e77]">
+					<h2 className="text-4xl font-bold text-center mb-12 text-white">
 						Nuestro Equipo
 					</h2>
 					<div className="flex flex-wrap justify-center gap-8">
@@ -314,7 +309,8 @@ export default function LandingPage() {
 							{
 								name: 'Kevin Bastidas',
 								role: 'Data Analyst',
-								img: imgUserDefault,
+								img: imgMemberKb,
+								linkedin: 'https://www.linkedin.com/in/kfbastidas',
 							},
 							{
 								name: 'Sebastian Gallegos',
@@ -324,17 +320,14 @@ export default function LandingPage() {
 						].map((member, index) => (
 							<Card
 								key={index}
-								className="w-64 shadow-lg hover:shadow-xl transition-shadow duration-300"
+								className="laptop:w-[16rem] w-[19rem] shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
 							>
 								<CardContent className="pt-6 text-center">
 									<Image
 										src={member.img}
 										alt={member.name}
-										width={128}
-										height={128}
-										className="rounded-full mb-4 mx-auto"
+										className="rounded-full mb-4 mx-auto w-[135px] laptop:w-[128px]"
 									/>
-									{/* Replace the above Image with actual photos of team members */}
 									<h3 className="font-semibold text-lg text-[#223e77]">
 										{member.name}
 									</h3>
@@ -361,36 +354,33 @@ export default function LandingPage() {
 				</div>
 			</section>
 
-			{/* Contact Form and Information */}
-			<section className="bg-[#223e77] text-white py-12">
-				<div className="container mx-auto">
-					<h2 className="text-4xl font-bold text-center mb-12">Contáctanos</h2>
-					<div className="grid md:grid-cols-2 gap-8 items-center">
+			<section className="text-white bg-[#ec253a] py-4 px-4">
+				<div className="container mx-auto text-base py-2">
+					<h2 className="text-2xl font-bold mb-1">Contáctanos</h2>
+					<div className="flex flex-col lg:flex-row justify-between space-y-2 ">
+						<div className="flex flex-col lg:flex-row  lg:space-x-1 px-6">
+							<div className="flex items-center space-x-1">
+								<MailIcon className="h-6 w-6 text-[#223e77]" />
+								<span className="text-white">sdcalderonc@gmail.com</span>
+							</div>
+							<div className="flex items-center space-x-1">
+								<MailIcon className="h-6 w-6 text-[#223e77]" />
+								<span className="text-gray-100">kfbastidas96@outlook.com</span>
+							</div>
+							<div className="flex items-center space-x-1">
+								<MailIcon className="h-6 w-6 text-[#223e77]" />
+								<span className="text-gray-100">
+									sebastian_gallegos@gmail.com
+								</span>
+							</div>
+						</div>
 						<div>
 							<Image
-								src={imgLgSaturdays}
+								src={imgLgSaturdaysBlue}
 								alt="Metro de Quito Logo"
-								width={400}
-								height={400}
+								width={160}
+								height={160}
 							/>
-						</div>
-						<div className="space-y-6">
-							<h3 className="text-2xl font-semibold mb-4">
-								Información de Contacto
-							</h3>
-
-							<div className="flex items-center space-x-4">
-								<MailIcon className="h-6 w-6 text-[#ec253a]" />
-								<span>sdcalderonc@gmail.com</span>
-							</div>
-							<div className="flex items-center space-x-4">
-								<MailIcon className="h-6 w-6 text-[#ec253a]" />
-								<span>kevin_bastidas@gmail.com</span>
-							</div>
-							<div className="flex items-center space-x-4">
-								<MailIcon className="h-6 w-6 text-[#ec253a]" />
-								<span>sebastian_gallegos@gmail.com</span>
-							</div>
 						</div>
 					</div>
 				</div>
