@@ -21,9 +21,11 @@ import imgMemberSc from '../../public/images/member-sc.jpeg';
 import imgUserDefault from '../../public/images/user_default.png';
 
 import imgCamara from '../../public/images/camara.png';
+import appDesktop from '../../public/images/appDesktop.gif';
 import imgHowWorks from '../../public/images/howWorks.jpeg';
 import imgLgOpenCv from '../../public/images/lg-opencv.png';
 import imgMemberKb from '../../public/images/imgMemberKb.jpeg';
+//import videoExample from '../../public/example.mp4';
 
 export default function LandingPage() {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -45,7 +47,7 @@ export default function LandingPage() {
 						className="!bg-[#ec253a] hover:!bg-red-700 !text-white"
 						onClick={() =>
 							window.open(
-								'https://github.com/StevenCalderon/metroquito',
+								'https://github.com/StevenCalderon/metroQuitoPY',
 								'_blank'
 							)
 						}
@@ -61,6 +63,71 @@ export default function LandingPage() {
 					className="opacity-20"
 				/>
 			</header>
+
+			{/* Sección de Muestra del Proyecto */}
+			<section className="bg-white py-14">
+				<div className="container mx-auto">
+					{/* Título y descripción */}
+					<div className="text-center mb-12">
+						<h2 className="text-4xl font-bold text-[#223e77] mb-4">
+							Visualiza el Proyecto en Acción
+						</h2>
+						<p className="text-lg text-gray-600">
+							Explora cómo funciona nuestro sistema de detección de proximidad
+							en el Metro de Quito.
+						</p>
+					</div>
+
+					{/* Contenido adaptable */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+						{/* Imagen de la aplicación Desktop */}
+						<div className="text-center">
+							<p className="text-lg font-bold text-gray-500 mb-4">
+								Aplicación Desktop
+							</p>
+							<Image
+								src={appDesktop}
+								alt="Aplicación Desktop"
+								width={800}
+								height={800}
+								className="rounded-lg shadow-lg mx-auto object-contain"
+							/>
+						</div>
+
+						{/* Video procesado */}
+						<div className="text-center">
+							<p className="text-lg font-bold text-gray-500 mb-4">
+								Video Procesado
+							</p>
+							<video
+								controls
+								className="rounded-lg shadow-lg w-full max-w-[500px] mx-auto h-auto"
+							>
+								<source
+									src="/videos/example.mp4"
+									type="video/mp4"
+								/>
+								Tu navegador no soporta la reproducción de videos.
+							</video>
+						</div>
+					</div>
+
+					{/* Botón para ver en GitHub */}
+					<div className="text-center mt-12">
+						<Button
+							className="!bg-[#223e77] hover:!bg-blue-700 !text-white px-6 py-3 rounded-lg text-lg shadow-md transition-all duration-300"
+							onClick={() =>
+								window.open(
+									'https://github.com/StevenCalderon/metroQuitoPY',
+									'_blank'
+								)
+							}
+						>
+							Ver en GitHub <ChevronRightIcon className="ml-2 h-5 w-5" />
+						</Button>
+					</div>
+				</div>
+			</section>
 
 			<section className="px-7 py-20 sm:px-20 md:px-5 xl:px-16 2xl:px-44 bg-gray-100">
 				<div className="container mx-auto">
@@ -140,7 +207,7 @@ export default function LandingPage() {
 								</h3>
 								<ul className="list-disc list-inside space-y-2">
 									<li>
-										Modelo de visión por computadora (detección de objetos)
+										Modelo de visión por computadora (detección de objetos) YOLO
 									</li>
 									<li>Framework de video en tiempo real (OpenCV)</li>
 									<li>Algoritmos para calcular distancia y activar alertas</li>
@@ -295,7 +362,7 @@ export default function LandingPage() {
 			<section className="py-20 bg-[#223e77]">
 				<div className="container mx-auto">
 					<h2 className="text-4xl font-bold text-center mb-12 text-white">
-						Nuestro Equipo
+						Conecta conmigo
 					</h2>
 					<div className="flex flex-wrap justify-center gap-8">
 						{[
@@ -305,17 +372,6 @@ export default function LandingPage() {
 								img: imgMemberSc,
 								linkedin:
 									'https://www.linkedin.com/in/steven-calderon-431535183/',
-							},
-							{
-								name: 'Kevin Bastidas',
-								role: 'Data Analyst',
-								img: imgMemberKb,
-								linkedin: 'https://www.linkedin.com/in/kfbastidas',
-							},
-							{
-								name: 'Sebastian Gallegos',
-								role: 'Data Analyst',
-								img: imgUserDefault,
 							},
 						].map((member, index) => (
 							<Card
@@ -362,16 +418,6 @@ export default function LandingPage() {
 							<div className="flex items-center space-x-1">
 								<MailIcon className="h-6 w-6 text-[#223e77]" />
 								<span className="text-white">sdcalderonc@gmail.com</span>
-							</div>
-							<div className="flex items-center space-x-1">
-								<MailIcon className="h-6 w-6 text-[#223e77]" />
-								<span className="text-gray-100">kfbastidas96@outlook.com</span>
-							</div>
-							<div className="flex items-center space-x-1">
-								<MailIcon className="h-6 w-6 text-[#223e77]" />
-								<span className="text-gray-100">
-									sebastian_gallegos@gmail.com
-								</span>
 							</div>
 						</div>
 						<div>
